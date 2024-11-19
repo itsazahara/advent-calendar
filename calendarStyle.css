@@ -72,14 +72,14 @@ h1 {
 }
 
 .dia.abierta {
-    color: transparent; /* Oculta el número del día */
-    background-color: transparent; /* Fondo transparente para la casilla */
+    color: transparent;
+    background-color: transparent;
 }
 
 .dia.abierta .imagen-dia {
     display: block;
     opacity: 1;
-    position: static; /* No es necesario que sea absoluta en este caso */
+    position: static;
     animation: none;
 }
 
@@ -162,35 +162,6 @@ h1 {
     }
 }
 
-/* Animación de puerta corredera 
-@keyframes abrirPuerta {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(100%);
-    }
-}
-
-.dia.abierta {
-    animation: abrirPuerta 0.5s forwards;
-}
-
-.imagen-dia {
-    display: none;
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.dia.abierta .imagen-dia {
-    display: block;
-    animation: aparecerImagen 1s ease-out;
-}*/
-
-/* Imagen sin animación */
 @keyframes aparecerImagen {
     0% {
         opacity: 0;
