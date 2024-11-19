@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Código del calendario de Adviento
     const casillas = document.querySelectorAll(".dia");
-    const hoy = new Date().getDate(); // Día actual
+    const hoy = new Date().getDate();
 
     casillas.forEach(casilla => {
         const dia = parseInt(casilla.dataset.dia, 10);
@@ -18,22 +17,18 @@ document.addEventListener("DOMContentLoaded", () => {
             } else if (abierta) {
                 alert(`Ya has recibido el regalo del día ${dia}. 🎁`);
             } else {
-                // Añadir clase para mostrar la imagen
                 casilla.classList.add("abierta");
 
-                // Mostrar la imagen asociada
                 const imagen = casilla.querySelector(".imagen-dia");
                 if (imagen) {
                     imagen.style.display = "block";
                 }
 
-                // Marcar como abierta
                 abierta = true;
             }
         });
     });
 
-    // Animación de nieve
     const nieve = document.createElement("div");
     nieve.classList.add("nieve");
     document.body.appendChild(nieve);
